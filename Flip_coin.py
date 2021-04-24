@@ -1,7 +1,6 @@
 import random
 try:
     numberOfFlips = int(input("how many times flip the coin"))
-
     def flipcoin(NumberOfFlips):
         head = 0
         tail = 0
@@ -14,7 +13,6 @@ try:
         headPercent = (head / numberOfFlips) * 100
         tailPercent = (head / numberOfFlips) * 100
         return headPercent, tailPercent
-
 
     headpercent, tailpercent = flipcoin(numberOfFlips)
     print(F"Head percent is {headpercent}% ")
