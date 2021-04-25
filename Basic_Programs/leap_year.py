@@ -1,12 +1,10 @@
 #Check if leap year or not
 
 year=int(input("Enter a year: "))
-
 minyear=1000
 maxyear=9999
 
 """check the user input minimum and maximum limit"""
-
 if year >= minyear and year <= maxyear :
         if year % 4 == 0 and year % 100 != 0:
             print ("Entered year is a Leap Year ")
