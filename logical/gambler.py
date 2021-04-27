@@ -9,7 +9,6 @@ description = 'Simulates a gambler who start with $stake and place fair $1 bets 
 import random
 
 while True:
-
     try:
         #given user Input Enter ammount stake and goal
         stake = int(input("Enter the amount you want to stake :"))
@@ -48,6 +47,5 @@ def gambler(stake,goal,number_of_times):
     # printing win percentage
     print(f"win percentage  ={win_percentage}")
     print(f"loss percentage ={loss_percentage}")
-
 
 gambler(stake,goal,number_of_times)
