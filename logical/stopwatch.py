@@ -1,11 +1,16 @@
-
+"""
+date = '24/04/2021'
+modified_date = '24/04/2021'
+author = 'Mahesh Naik'
+description = Stop watch problem"""
 import time
+
 """define function for stopwatch format"""
 def stopwatch(sec):
-    min = sec // 60
-    sec = sec % 60
-    hours = min % 60
-    print("Time = {0}:{1}:{2}".format(int(hours),int(min),sec))
+    min = (sec // 3600)//60
+    sec = ((sec % 3600)%60)
+    hours = min//3600
+    print('%02d:%02d:%02d' %(hours, min, sec))
 
 time_start=input("Press key to start the time")
 Start = time.time()
