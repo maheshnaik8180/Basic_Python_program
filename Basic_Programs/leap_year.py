@@ -1,4 +1,9 @@
-#Check if leap year or not
+"""
+date = '20/04/2021'
+modified_date = '21/04/2021'
+author = 'Mahesh Naik'
+description = 'Leap Year'
+Check if leap year or not"""
 
 year=int(input("Enter a year: "))
 minyear=1000

@@ -1,3 +1,9 @@
+"""
+date = '20/04/2021'
+modified_date = '21/04/2021'
+author = 'Mahesh Naik'
+description = 'Power of 2 Given user Input print the power of 2 '
+"""
 try:
     power = int(input("enter number :"))
 
