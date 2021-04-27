@@ -1,5 +1,11 @@
-import random
+"""
+date = '24/04/2021'
+modified_date = '24/04/2021'
+author = 'Mahesh Naik'
+description = '  Coupon number problem'
+"""
 
+import random
 
 while True:
     try:
@@ -15,6 +21,8 @@ while True:
 def coupon_number(number_of_coupons):
     coupons=0
     random_numbers=0
+    """check the random numbers in loop check the number is not in random nums 
+        and append the number is random_nums list"""
     random_nums=[]
     while coupons!=number_of_coupon:
         number = random.randint(1, 10**4)
