@@ -1,4 +1,9 @@
-
+"""
+date = '23/04/2021'
+modified_date = '23/04/2021'
+author = 'Mahesh Naik'
+description = 'Write a program Quadratic.py to find the roots of the equation a*x*x + b*x + c. Since the equation is x*x, hence there are 2 roots.'
+"""
 import math
 def quad(num1,num2,num3):
     delta = num2 * num2 - 4 * num1 * num3
