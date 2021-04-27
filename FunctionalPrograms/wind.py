@@ -1,4 +1,9 @@
-
+"""
+date = '23/04/2021'
+modified_date = '23/04/2021'
+author = 'Mahesh Naik'
+description = 'A program with cubic running time. Read in N integers and counts the   number of triples that sum to exactly 0.'
+"""
 import math
 try:
     """input temperature"""
