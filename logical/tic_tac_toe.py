@@ -6,7 +6,6 @@ description = Cross game problem"""
 
 grid={1:' ', 2:' ', 3:' ', 4:' ', 5:' ', 6:' ', 7:' ', 8:' ', 9:' '}
 
-
 def printgrid(board):
     print(board[1] + '|' + board[2] + '|' + board[3])
     print('-+-+-')
@@ -14,17 +13,14 @@ def printgrid(board):
     print('-+-+-')
     print(board[7] + '|' + board[8] + '|' + board[9])
 
-
 # funct for input and checking if won
 def player(grid, turn, i):
     print('Player ' + turn + ', choose the box :')
 
     turn1 = int(input())
-
     if grid[turn1] == ' ':
         grid[turn1] = turn
         printgrid(grid)
-
 
     else:
         print('Already full, Please try again.:')
@@ -62,6 +58,5 @@ def game():
             turn = 'x'
 
     print("Thanks for playing!!")
-
 
 game()
