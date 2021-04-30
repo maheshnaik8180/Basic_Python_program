@@ -16,7 +16,6 @@ while True:
             print("Invalid input!!")
     except:
         print("Invalid input !!")
-
 """ get input from user to genearte n random coupon numbe"""
 def coupon_number(number_of_coupons):
     coupons=0
