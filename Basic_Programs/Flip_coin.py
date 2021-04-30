@@ -5,15 +5,26 @@ author = 'Mahesh Naik'
 description = 'Flip Coin and print percentage of Heads and Tails
  using random function given by user input'
 """
-
 import random
+import logging
+
+from basiclogger import logger
+
 heads = 0
 tails = 0
 heads_percent = 0
 tails_percent = 0
 
+logger.setLevel(logging.INFO)
 try:
-    # taking input from the user no of times to flip the coin
+    """taking input from the user no of times to flip the coin
+    run loop n times
+    assign a value to coin either 0 or 1
+    increment heads
+     if coin value is assigned as 1
+     increment tails
+     converting numbers to string using str()
+    """
     number = int(input("Enter the times you want to Flip Coin: "))
     if number >= 0:
         for i in range(number):  # run loop n times
@@ -24,11 +35,11 @@ try:
                 tails += 1  # increment tails
         heads_percent = ((heads / (heads + tails)) * 100)
         tails_percent = ((tails / (heads + tails)) * 100)
-        print("Heads percent: " + str(heads_percent))
-        print("Tails percent: " + str(tails_percent))  # converting numbers to string using str()
+        logger.info("Heads percent: " + str(heads_percent))
+        logger.info("Tails percent: " + str(tails_percent))  # converting numbers to string using str()
     else:
-        print("Enter the positive Number:")
+        logger.info("Enter the positive Number:")
 
 
 except Exception:
-    print("Exception occured")
+    logger.exception("Exception occured")

@@ -1,0 +1,46 @@
+2021-04-30 12:03:44,531 : INFO : basiclogger : Heads percent: 66.66666666666666
+2021-04-30 12:03:44,531 : INFO : basiclogger : Tails percent: 33.33333333333333
+2021-04-30 12:08:32,981 : ERROR : basiclogger : Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\GENIUS\PycharmProjects\Basic_Programs\harmonicNumber.py", line 23, in <module>
+    logger.info(str("Sum is: ", a ))
+TypeError: str() argument 2 must be str, not float
+2021-04-30 12:08:56,081 : ERROR : basiclogger : Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\GENIUS\PycharmProjects\Basic_Programs\harmonicNumber.py", line 23, in <module>
+    logger.info(str("Sum is: ",'a' ))
+TypeError: decoding str is not supported
+2021-04-30 12:10:49,970 : ERROR : basiclogger : Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\GENIUS\PycharmProjects\Basic_Programs\harmonicNumber.py", line 22, in <module>
+    print(a = round(s, 3))
+TypeError: 'a' is an invalid keyword argument for print()
+2021-04-30 12:11:11,476 : INFO : basiclogger : Sum is: 
+2021-04-30 12:11:42,751 : INFO : basiclogger : Sum is: 
+2021-04-30 12:12:55,302 : INFO : basiclogger : Sum is: 
+2021-04-30 12:12:55,302 : INFO : basiclogger : 1.5
+2021-04-30 12:14:01,835 : INFO : basiclogger : Sum is: 
+2021-04-30 12:14:01,835 : ERROR : basiclogger : Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\GENIUS\PycharmProjects\Basic_Programs\harmonicNumber.py", line 23, in <module>
+    logger.info("sum is:"+round(s, 3))
+TypeError: can only concatenate str (not "float") to str
+2021-04-30 12:14:13,669 : INFO : basiclogger : Sum is: 
+2021-04-30 12:16:08,082 : INFO : basiclogger : Sum is: 
+2021-04-30 12:16:08,082 : INFO : basiclogger : 1.5
+2021-04-30 12:20:06,894 : INFO : basiclogger : Entered year is a Leap Year 
+2021-04-30 12:22:54,062 : INFO : basiclogger : 2^0=1
+2021-04-30 12:22:54,062 : INFO : basiclogger : 2^1=2
+2021-04-30 12:22:54,062 : INFO : basiclogger : 2^2=4
+2021-04-30 12:22:54,062 : INFO : basiclogger : 2^3=8
+2021-04-30 12:22:54,062 : INFO : basiclogger : print valid data type
+2021-04-30 12:31:43,214 : ERROR : basiclogger : Exception occured
+Traceback (most recent call last):
+  File "C:\Users\GENIUS\PycharmProjects\Basic_Programs\primeFactors.py", line 25, in <module>
+    logger.info("%d" % num, end=' ')
+  File "C:\Users\GENIUS\AppData\Local\Programs\Python\Python39\lib\logging\__init__.py", line 1446, in info
+    self._log(INFO, msg, args, **kwargs)
+TypeError: _log() got an unexpected keyword argument 'end'
+2021-04-30 12:32:36,061 : INFO : basiclogger : are the prime factors of number
+2021-04-30 12:32:36,061 : INFO : basiclogger : 23
+2021-04-30 12:34:05,253 : INFO : basiclogger : hello mahesh, How are you?
