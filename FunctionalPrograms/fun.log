@@ -1,0 +1,46 @@
+2021-04-30 00:58:04,978:INFO:__main__:An info message
+2021-04-30 00:58:18,732:INFO:functionlog:An info message
+2021-04-30 00:59:07,618:INFO:functionlog:An info message
+2021-04-30 00:59:43,888:INFO:functionlog:An info message
+2021-04-30 01:00:28,798:INFO:functionlog:An info message
+2021-04-30 01:17:57,525:INFO:functionlog:An info message
+2021-04-30 01:21:32,077:INFO:functionlog:567
+2021-04-30 01:22:45,171:INFO:functionlog:Total numbers of triplets are: 1
+2021-04-30 01:23:53,256:INFO:functionlog:Enter the entries:
+2021-04-30 01:24:02,108:INFO:functionlog:[[1, 2], [3, 4], [5, 6]]
+2021-04-30 01:29:27,563:ERROR:functionlog:Exception Error
+Traceback (most recent call last):
+  File "C:\Users\GENIUS\PycharmProjects\FunctionalPrograms\wind.py", line 31, in <module>
+    logger.info("Wind chill is: "+ a)
+TypeError: can only concatenate str (not "float") to str
+2021-04-30 01:29:57,199:ERROR:functionlog:Exception Error
+Traceback (most recent call last):
+  File "C:\Users\GENIUS\PycharmProjects\FunctionalPrograms\wind.py", line 22, in <module>
+    speed = int(input("Wind speed is: "))
+ValueError: invalid literal for int() with base 10: '3e2'
+2021-04-30 01:30:06,307:INFO:functionlog:Wind chill is: a
+2021-04-30 01:30:59,295:ERROR:functionlog:Exception Error
+Traceback (most recent call last):
+  File "C:\Users\GENIUS\PycharmProjects\FunctionalPrograms\wind.py", line 31, in <module>
+    logger.info("Wind chill is: " + a)
+TypeError: can only concatenate str (not "float") to str
+2021-04-30 01:31:34,704:ERROR:functionlog:Exception Error
+Traceback (most recent call last):
+  File "C:\Users\GENIUS\PycharmProjects\FunctionalPrograms\wind.py", line 31, in <module>
+    logger.info(str("Wind chill is: " + a))
+TypeError: can only concatenate str (not "float") to str
+2021-04-30 01:32:01,794:ERROR:functionlog:Exception Error
+Traceback (most recent call last):
+  File "C:\Users\GENIUS\PycharmProjects\FunctionalPrograms\wind.py", line 31, in <module>
+    logger.info(float("Wind chill is: " + a))
+TypeError: can only concatenate str (not "float") to str
+2021-04-30 01:32:32,602:ERROR:functionlog:Exception Error
+Traceback (most recent call last):
+  File "C:\Users\GENIUS\PycharmProjects\FunctionalPrograms\wind.py", line 31, in <module>
+    logger.info(str("Wind chill is: " + a))
+TypeError: can only concatenate str (not "float") to str
+2021-04-30 01:33:32,230:ERROR:functionlog:Exception Error
+Traceback (most recent call last):
+  File "C:\Users\GENIUS\PycharmProjects\FunctionalPrograms\wind.py", line 31, in <module>
+    logger.info(f"Wind chill is: " +{a})
+TypeError: can only concatenate str (not "set") to str

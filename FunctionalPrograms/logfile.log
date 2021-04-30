@@ -1,0 +1,16 @@
+2021-04-30 12:40:38,607 : INFO : funlog : 11
+2021-04-30 12:41:21,543 : INFO : funlog : 12
+2021-04-30 12:42:32,266 : INFO : funlog : 118854528511
+2021-04-30 12:52:31,575 : INFO : funlog : Triplet is (2,-1,-1)
+2021-04-30 12:52:31,575 : INFO : funlog : Triplet is (-1,2,-1)
+2021-04-30 12:52:31,575 : INFO : funlog : Triplet is (-1,-1,2)
+2021-04-30 12:53:01,455 : INFO : funlog : Triplet is (2,-1,-1)
+2021-04-30 12:53:01,455 : INFO : funlog : Triplet is (-1,2,-1)
+2021-04-30 12:53:01,455 : INFO : funlog : Triplet is (-1,-1,2)
+2021-04-30 12:53:01,455 : INFO : funlog : Total numbers of triplets are: 3
+2021-04-30 12:55:04,007 : ERROR : funlog : Exception Error 
+Traceback (most recent call last):
+  File "C:\Users\GENIUS\PycharmProjects\FunctionalPrograms\twoD_Array.py", line 13, in <module>
+    logger.setLevel(logger.INFO)
+AttributeError: 'Logger' object has no attribute 'INFO'
+2021-04-30 12:56:34,656 : INFO : funlog : [[3], [4], [4]]
