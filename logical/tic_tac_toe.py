@@ -7,7 +7,9 @@ import logging
 import random
 
 from logicallog import logger
-
+"""Corners, Center and Others, respectively
+    Winner combinations
+"""
 
 
 board = [i for i in range(0, 9)]
@@ -21,7 +23,12 @@ winners = ((0, 1, 2), (3, 4, 5), (6, 7, 8), (0, 3, 6), (1, 4, 7), (2, 5, 8), (0,
 tab = range(1, 10)
 
 
-def print_board():  # board logic
+def print_board():
+    """board logic
+    assign blocks using for loop
+
+
+"""
     logger.setLevel(logging.INFO)
     x = 1
     for i in board:
@@ -37,20 +44,26 @@ def print_board():  # board logic
         print(char, end=end)
 
 
-def select_char():   # Select X or O randomly
+def select_char():
+    """Select X or O randomly
+    use random function"""
     chars = ('X', 'O')
     if random.randint(0, 1) == 0:
         return chars[::-1]
     return chars
 
 
-def can_move(brd, player, move):   # Checking for the Move
+def can_move(brd, player, move):
+    """Checking for the Move
+    use conditional statement """
     if move in tab and brd[move - 1] == move - 1:
         return True
     return False
 
 
 def can_win(brd, player, move):
+    """check block and place empty block
+    using append method"""
     places = []
     x = 0
     for i in brd:
@@ -79,8 +92,13 @@ def make_move(brd, player, move, undo=False):
 
 
 def computer_move():
+    """Checking for the winning Condition
+    Blocking Player
+    Trying to win
+    move=mv
+    ."""
     move = -1
-    # Checking for the winning Condition.
+
     for i in range(1, 10):
         if make_move(board, computer, i, True)[1]:
             move = i
@@ -102,6 +120,8 @@ def computer_move():
 
 
 def space_exist():
+    """check board  if board is full than try to another block else game is tie
+    using conditional statement use and check print valid sign or not"""
     return board.count('X') + board.count('O') != 9
 try:
     player, computer = select_char()
