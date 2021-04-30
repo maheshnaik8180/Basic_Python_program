@@ -9,6 +9,9 @@ description =crete JSON file and perform read & write operation"""
     using append function add data in JSON file"""
 
 import json
+import logging
+from logicallog import logger
+logger.setLevel(logging.INFO)
 
 data = {}
 data['people'] = []
@@ -34,7 +37,7 @@ with open('data.json', 'w') as outfile:
 with open('data.json') as json_file:
     data = json.load(json_file)
     for p in data['people']:
-        print('Name: ' + p['name'])
-        print('Website: ' + p['website'])
-        print('From: ' + p['from'])
-        print('')
+        logger.info('Name: ' + p['name'])
+        logger.info('Website: ' + p['website'])
+        logger.info('From: ' + p['from'])
+        logger.info('')

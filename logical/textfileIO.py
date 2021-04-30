@@ -3,10 +3,14 @@ date = '27/04/2021'
 modified_date = '28/04/2021'
 author = 'Mahesh Naik'
 description =crete text file and perform read write operation"""
+import logging
+from logicallog import logger
+logger.setLevel(logging.INFO)
 
 """read and write text file
 using read,write function
 using append function add data in text file"""
+
 
 with open('simple.txt', 'w') as f:
     a = f.write('hello mahesh how are you')
@@ -16,7 +20,7 @@ with open('simple.txt','r') as f:
 
 f= open('simple.txt','r')
 data = f.read()
-print(data)
+logger.info(data)
 f.close()
 
 

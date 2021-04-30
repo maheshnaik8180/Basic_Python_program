@@ -3,11 +3,15 @@ date = '27/04/2021'
 modified_date = '28/04/2021'
 author = 'Mahesh Naik'
 description =crete CSV file and perform read write operation"""
+import csv
+import logging
+from logicallog import logger
+logger.setLevel(logging.INFO)
+
 
 """read and write CSV file
 using read,write function
 using append function add data in CSV file"""
-import csv
 
 with open('names.csv', 'w') as csvfile:
     fieldnames = ['first_name', 'last_name']
@@ -21,4 +25,4 @@ with open('names.csv', 'w') as csvfile:
 f=open('names.csv')
 csv = csv.reader(f)
 for row in csv:
- print(row)
+ logger.info(row)
