@@ -7,10 +7,15 @@ description = 'Simulates a gambler who start with $stake and place fair $1 bets 
                  number of bets he/she makes. Run the experiment N times, averages the results, and prints them out.'
 """
 import random
+import logging
+
+from logicallog import logger
 
 while True:
     try:
-        #given user Input Enter ammount stake and goal
+        """given user Input Enter ammount stake and goal
+            given User Input How many times play the user"""
+
         stake = int(input("Enter the amount you want to stake :"))
         goal = int(input("Enter your goal:"))
         #given User Input How many times play the user
@@ -18,11 +23,23 @@ while True:
         if stake>0 and goal>0 and number_of_times>0:
             break
         else:
-            print("Invalid input!!")
+            logger.info("Invalid input!!")
     except:
-        print("Invalid input!!")
+        logger.info("Invalid input!!")
 
 def gambler(stake,goal,number_of_times):
+    logger.setLevel(logging.INFO)
+    """
+          :param stake: initial amaount
+          :param goal: goal to reach particular amount
+          :return: win or loss
+          while loop till gambler stake=0 or stake =goal(200)
+          random var for win or loose
+          if gambler looses stake-1 and number of loose-1
+          increment wins stake++ and win++
+          printing number of bets
+          printing win percentage
+          """
     # initially win=0 and loose=0
     bets=0
     win=0
@@ -41,11 +58,11 @@ def gambler(stake,goal,number_of_times):
     loss_percentage=((bets-win)/bets)*100
     win_percentage=(win/bets)*100
     # printing number of bets
-    print(f"Total number of bets = {bets}")
+    logger.info(f"Total number of bets = {bets}")
     # printing number of wins
-    print(f"Total win = {win}")
+    logger.info(f"Total win = {win}")
     # printing win percentage
-    print(f"win percentage  ={win_percentage}")
-    print(f"loss percentage ={loss_percentage}")
+    logger.info(f"win percentage  ={win_percentage}")
+    logger.info(f"loss percentage ={loss_percentage}")
 
 gambler(stake,goal,number_of_times)

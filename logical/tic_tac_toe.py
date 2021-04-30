@@ -1,62 +1,130 @@
 """
 date = '24/04/2021'
-modified_date = '27/04/2021'
+modified_date = '24/04/2021'
 author = 'Mahesh Naik'
-description = Cross game problem"""
+description = Stop watch problem"""
+import logging
+import random
 
-grid={1:' ', 2:' ', 3:' ', 4:' ', 5:' ', 6:' ', 7:' ', 8:' ', 9:' '}
-
-def printgrid(board):
-    print(board[1] + '|' + board[2] + '|' + board[3])
-    print('-+-+-')
-    print(board[4] + '|' + board[5] + '|' + board[6])
-    print('-+-+-')
-    print(board[7] + '|' + board[8] + '|' + board[9])
-
-# funct for input and checking if won
-def player(grid, turn, i):
-    print('Player ' + turn + ', choose the box :')
-
-    turn1 = int(input())
-    if grid[turn1] == ' ':
-        grid[turn1] = turn
-        printgrid(grid)
-
-    else:
-        print('Already full, Please try again.:')
-        player(grid, turn, i)
-
-    if (i >= 4):
-
-        if (grid[1] == grid[2] == grid[3] == turn or grid[4] == grid[5] == grid[6] == turn or grid[7] == grid[8] ==
-                grid[9] == turn or grid[1] == grid[4] == grid[7] == turn or grid[2] == grid[5] == grid[8] == turn or
-                grid[3] == grid[6] == grid[9] == turn or grid[1] == grid[5] == grid[9] == turn or grid[3] == grid[5] ==
-                grid[7] == turn):
-            printgrid(grid)
-            print(turn + ' WON')
-            return 1
+from logicallog import logger
 
 
-def game():
-    turn = 'o'
 
-    for i in range(10):
+board = [i for i in range(0, 9)]
+player, computer = '', ''
 
-        # if loop runs to end, Tie game
-        if i == 9:
-            print("tie game")
+# Corners, Center and Others, respectively
+moves = ((1, 7, 3, 9), (5,), (2, 4, 6, 8))
+# Winner combinations
+winners = ((0, 1, 2), (3, 4, 5), (6, 7, 8), (0, 3, 6), (1, 4, 7), (2, 5, 8), (0, 4, 8), (2, 4, 6))
+# Table
+tab = range(1, 10)
+
+
+def print_board():  # board logic
+    logger.setLevel(logging.INFO)
+    x = 1
+    for i in board:
+        end = ' | '
+        if x % 3 == 0:
+            end = ' \n'
+            if i != 1:
+                end += '---------\n'
+        char = ' '
+        if i in ('X', 'O'):
+            char = i
+        x += 1
+        print(char, end=end)
+
+
+def select_char():   # Select X or O randomly
+    chars = ('X', 'O')
+    if random.randint(0, 1) == 0:
+        return chars[::-1]
+    return chars
+
+
+def can_move(brd, player, move):   # Checking for the Move
+    if move in tab and brd[move - 1] == move - 1:
+        return True
+    return False
+
+
+def can_win(brd, player, move):
+    places = []
+    x = 0
+    for i in brd:
+        if i == player: places.append(x);
+        x += 1
+    win = True
+    for tup in winners:
+        win = True
+        for ix in tup:
+            if brd[ix] != player:
+                win = False
+                break
+        if win:
+            break
+    return win
+
+
+def make_move(brd, player, move, undo=False):
+    if can_move(brd, player, move):
+        brd[move - 1] = player
+        win = can_win(brd, player, move)
+        if undo:
+            brd[move - 1] = move - 1
+        return (True, win)
+    return (False, False)
+
+
+def computer_move():
+    move = -1
+    # Checking for the winning Condition.
+    for i in range(1, 10):
+        if make_move(board, computer, i, True)[1]:
+            move = i
+            break
+    if move == -1:
+        # Blocking Player
+        for i in range(1, 10):
+            if make_move(board, player, i, True)[1]:
+                move = i
+                break
+    if move == -1:
+        # Trying to win
+        for tup in moves:
+            for mv in tup:
+                if move == -1 and can_move(board, computer, mv):
+                    move = mv
+                    break
+    return make_move(board, computer, move)
+
+
+def space_exist():
+    return board.count('X') + board.count('O') != 9
+try:
+    player, computer = select_char()
+    logger.info('Player is [%s] and computer is [%s]' % (player, computer))
+    result = '-----! Drawn, game tie'
+    while space_exist():
+        print_board()
+        print(end='')
+        logger.info('Make your move ! [1-9] : ')\
+
+        move = int(input())
+        moved, won = make_move(board, player, move)
+        if not moved:
+            logger.info('  Invalid number, Please Try again ')
+            continue
+        if won:
+            result = ' Congratulations ! You won '
+            break
+        elif computer_move()[1]:
+            result = 'You lose ! '
             break
 
-        # if anyone won , exit
-        if (player(grid, turn, i) == 1):
-            break
-
-            # change player
-        if (turn == 'x'):
-            turn = 'o'
-        else:
-            turn = 'x'
-
-    print("Thanks for playing!!")
-
-game()
+    print_board()
+    logger.info(result)
+except Exception:
+    logger.exception("Exception occured")
