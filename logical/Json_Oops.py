@@ -1,9 +1,19 @@
+"""
+date = '29/04/2021'
+modified_date = '30/04/2021'
+author = 'Mahesh Naik'
+description = '  CSV filehandling read and write data using oops concept'
+"""
+
+
 # Import the module
 import json
 
 
 class filehandling:
-
+    """write data with open statement
+        using append method add data in list
+        """
     def datawrite(self):
         data = ""
     data = {}
@@ -29,6 +39,11 @@ class filehandling:
 
 
     def dataread(self):
+        """
+        read data from json file
+        using open close file method
+        @return:
+        """
         print("read data from json file")
         with open('data.json') as json_file:
             data = json.load(json_file)

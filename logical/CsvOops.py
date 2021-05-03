@@ -1,9 +1,19 @@
+"""
+date = '29/04/2021'
+modified_date = '30/04/2021'
+author = 'Mahesh Naik'
+description = '  CSV filehandling read and write data using oops concept'
+"""
+
 import pandas
 import pandas as pd
 
 
 class fileHandling:
-
+        """
+            reads csv file and converts contents into data frome
+            :return: returns fieldname
+            """
         def CSVwrite(self):
 
             fieldnames = pd.DataFrame([['Mahesh','Naik'], ['vikas', 'Naik'], ['rakesh', 'desai']],
@@ -13,6 +23,10 @@ class fileHandling:
 
 
         def CSVread(self):
+            """
+            read file using pandas function 
+            @return:datafile
+            """
             dataFile = pandas.read_csv('names.csv')
             print(dataFile)
             return dataFile
@@ -29,9 +43,3 @@ csv_write = fileHandling()
 write = csv_write.CSVwrite()
 
 
-
-# csvPath = 'C:/Users/GENIUS/PycharmProjects/logical/names.csv'
-# # object instantiated
-# read = fileHandling(csvPath)
-# # function call to read csv file and convert into data frame
-# file = read.CSVreader()
