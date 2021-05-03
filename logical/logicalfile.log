@@ -53,3 +53,63 @@ TypeError: 'NoneType' object is not callable
 2021-04-30 17:21:52,563 : INFO : logicallog : From: Nashik
 2021-04-30 17:21:52,563 : INFO : logicallog : 
 2021-04-30 17:23:36,776 : INFO : logicallog : hello mahesh how are you
+2021-05-03 12:27:29,856 : INFO : logicallog : Name: Mahesh
+2021-05-03 12:27:29,857 : INFO : logicallog : Website: naikmahesh.com
+2021-05-03 12:27:29,857 : INFO : logicallog : From: Kolhapur
+2021-05-03 12:27:29,857 : INFO : logicallog : 
+2021-05-03 12:27:29,857 : INFO : logicallog : Name: sagar
+2021-05-03 12:27:29,857 : INFO : logicallog : Website: google.com
+2021-05-03 12:27:29,857 : INFO : logicallog : From: Latur
+2021-05-03 12:27:29,857 : INFO : logicallog : 
+2021-05-03 12:27:29,857 : INFO : logicallog : Name: Sheetal
+2021-05-03 12:27:29,857 : INFO : logicallog : Website: apple.com
+2021-05-03 12:27:29,857 : INFO : logicallog : From: Nashik
+2021-05-03 12:27:29,858 : INFO : logicallog : 
+2021-05-03 12:30:58,997 : INFO : logicallog : Name: Mahesh
+2021-05-03 12:30:58,997 : INFO : logicallog : Website: naikmahesh.com
+2021-05-03 12:30:58,998 : INFO : logicallog : From: Kolhapur
+2021-05-03 12:30:58,998 : INFO : logicallog : 
+2021-05-03 12:30:58,998 : INFO : logicallog : Name: sagar
+2021-05-03 12:30:58,998 : INFO : logicallog : Website: google.com
+2021-05-03 12:30:58,998 : INFO : logicallog : From: Latur
+2021-05-03 12:30:58,998 : INFO : logicallog : 
+2021-05-03 12:30:58,998 : INFO : logicallog : Name: Sheetal
+2021-05-03 12:30:58,998 : INFO : logicallog : Website: apple.com
+2021-05-03 12:30:58,998 : INFO : logicallog : From: Nashik
+2021-05-03 12:30:58,998 : INFO : logicallog : 
+2021-05-03 12:31:48,723 : INFO : logicallog : Name: Mahesh
+2021-05-03 12:31:48,724 : INFO : logicallog : Website: naikmahesh.com
+2021-05-03 12:31:48,724 : INFO : logicallog : From: Kolhapur
+2021-05-03 12:31:48,724 : INFO : logicallog : 
+2021-05-03 12:31:48,724 : INFO : logicallog : Name: sagar
+2021-05-03 12:31:48,724 : INFO : logicallog : Website: google.com
+2021-05-03 12:31:48,724 : INFO : logicallog : From: Latur
+2021-05-03 12:31:48,725 : INFO : logicallog : 
+2021-05-03 12:31:48,725 : INFO : logicallog : Name: Sheetal
+2021-05-03 12:31:48,725 : INFO : logicallog : Website: apple.com
+2021-05-03 12:31:48,725 : INFO : logicallog : From: Nashik
+2021-05-03 12:31:48,725 : INFO : logicallog : 
+2021-05-03 12:32:06,409 : INFO : logicallog : Name: Mahesh
+2021-05-03 12:32:06,410 : INFO : logicallog : Website: naikmahesh.com
+2021-05-03 12:32:06,410 : INFO : logicallog : From: Kolhapur
+2021-05-03 12:32:06,410 : INFO : logicallog : 
+2021-05-03 12:32:06,410 : INFO : logicallog : Name: sagar
+2021-05-03 12:32:06,411 : INFO : logicallog : Website: google.com
+2021-05-03 12:32:06,411 : INFO : logicallog : From: Latur
+2021-05-03 12:32:06,411 : INFO : logicallog : 
+2021-05-03 12:32:06,411 : INFO : logicallog : Name: Sheetal
+2021-05-03 12:32:06,411 : INFO : logicallog : Website: apple.com
+2021-05-03 12:32:06,411 : INFO : logicallog : From: Nashik
+2021-05-03 12:32:06,411 : INFO : logicallog : 
+2021-05-03 12:52:45,556 : INFO : logicallog : Name: Mahesh
+2021-05-03 12:52:45,576 : INFO : logicallog : Website: naikmahesh.com
+2021-05-03 12:52:45,576 : INFO : logicallog : From: Kolhapur
+2021-05-03 12:52:45,576 : INFO : logicallog : 
+2021-05-03 12:52:45,576 : INFO : logicallog : Name: sagar
+2021-05-03 12:52:45,576 : INFO : logicallog : Website: google.com
+2021-05-03 12:52:45,576 : INFO : logicallog : From: Latur
+2021-05-03 12:52:45,576 : INFO : logicallog : 
+2021-05-03 12:52:45,576 : INFO : logicallog : Name: Sheetal
+2021-05-03 12:52:45,576 : INFO : logicallog : Website: apple.com
+2021-05-03 12:52:45,576 : INFO : logicallog : From: Nashik
+2021-05-03 12:52:45,577 : INFO : logicallog : 
